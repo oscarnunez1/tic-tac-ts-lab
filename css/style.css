@@ -1,23 +1,22 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100);
 
-* {
+html {
+  box-sizing: border-box
+}
+
+/* The Universal Selector */
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after { /* All ::after pseudo-elements */
+  /* height & width will now include border & padding by default
+     but can be over-ridden as needed */
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .board {
-  display: grid;
-  grid-template-rows: repeat(3, 10vmin);
-  grid-template-columns: repeat(3, 10vmin);
-  grid-gap: 1vmin;
-  justify-content: center;
-  border: 2px solid lightgray;
-  width: 50%;
-}
-
-/* .board {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -27,7 +26,8 @@
   background-color: #eee;
   padding: 10px;
   border: 2px solid lightgray;
-} */
+  border-radius: 8px;
+}
 
 .sqr {
   width: 100px;
@@ -40,6 +40,7 @@
   align-items: center;
   cursor: pointer;
   box-sizing: border-box;
+  border-radius: 8px;
 }
 
 .sqr:hover {
