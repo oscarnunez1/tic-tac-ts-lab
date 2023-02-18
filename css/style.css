@@ -1,0 +1,47 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.board {
+  display: grid;
+  grid-template-rows: repeat(3, 10vmin);
+  grid-template-columns: repeat(3, 10vmin);
+  grid-gap: 1vmin;
+  justify-content: center;
+  border: 2px solid lightgray;
+  width: 50%;
+}
+
+/* .board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 340px;
+  height: 340px;
+  background-color: #eee;
+  padding: 10px;
+  border: 2px solid lightgray;
+} */
+
+.sqr {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border: 2px solid #333;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.sqr:hover {
+  background-color: #f0f0f0;
+}
