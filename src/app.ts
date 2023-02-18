@@ -1,10 +1,13 @@
-
 /*-------------------------------- Constants --------------------------------*/
 
 
 
 /*---------------------------- Variables (state) ----------------------------*/
 
+let board: (number | null)[]
+let turn: number
+let winner: boolean
+let tie: boolean
 
 
 /*------------------------ Cached Element References ------------------------*/
