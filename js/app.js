@@ -28,5 +28,4 @@ function init() {
     render();
 }
 function render() {
-
 }

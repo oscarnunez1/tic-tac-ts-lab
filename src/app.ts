@@ -43,6 +43,6 @@ function init(): void {
 }
 
 function render(): void {
-  updateBoard()
-  updateMessage()
+
 }
+
