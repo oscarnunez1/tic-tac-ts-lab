@@ -13,7 +13,7 @@ console.log(messageEl);
 const resetBtnEl = document.querySelector("#reset-button");
 console.log(resetBtnEl);
 /*----------------------------- Event Listeners -----------------------------*/
-// resetBtnEl?.addEventListener('click', handleResetClick)
+// resetBtnEl.addEventListener('click', handleResetClick)
 /*-------------------------------- Functions --------------------------------*/
 // function handleResetClick(evt: MouseEvent): void {
 //   console.log(evt)
@@ -28,6 +28,8 @@ function init() {
     render();
 }
 function render() {
+    updateBoard();
+    updateMessage();
 }
 function updateBoard() {
     board.forEach((square, index) => {
@@ -41,4 +43,15 @@ function updateBoard() {
             return (squareEls[index].textContent = "");
         }
     });
+}
+function updateMessage() {
+    if (!winner && !tie) {
+        messageEl.innerText = `It's ${turn > 0 ? "X" : "O"}'s turn`;
+    }
+    else if (!winner && tie) {
+        messageEl.innerText = `Tie game`;
+    }
+    else {
+        messageEl.innerText = `${turn > 0 ? "X" : "O"} wins`;
+    }
 }

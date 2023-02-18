@@ -7,7 +7,7 @@
 let board: (number | null)[]
 let turn: number
 let winner: boolean
-let tie: boolean
+let tie: boolean 
 
 /*------------------------ Cached Element References ------------------------*/
 
@@ -22,7 +22,7 @@ console.log(resetBtnEl);
 
 /*----------------------------- Event Listeners -----------------------------*/
 
-// resetBtnEl?.addEventListener('click', handleResetClick)
+// resetBtnEl.addEventListener('click', handleResetClick)
 
 
 /*-------------------------------- Functions --------------------------------*/
@@ -43,7 +43,8 @@ function init(): void {
 }
 
 function render(): void {
-
+  updateBoard()
+  updateMessage()
 }
 
 function updateBoard(): void {
@@ -58,3 +59,12 @@ function updateBoard(): void {
   })
 }
 
+function updateMessage(): void {
+  if (!winner && !tie) {
+    messageEl.innerText = `It's ${turn > 0 ? "X" : "O"}'s turn`
+  } else if (!winner && tie) {
+    messageEl.innerText = `Tie game`;
+  } else {
+    messageEl.innerText = `${turn > 0 ? "X" : "O"} wins`;
+  }
+}
