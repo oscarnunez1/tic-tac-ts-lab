@@ -30,3 +30,13 @@ console.log(resetBtnEl);
 // function handleResetClick(evt: MouseEvent): void {
 //   console.log(evt)
 // }
+
+init()
+
+function init(): void {
+  console.log("The game is working")
+  board = [ null, null, null, null, null, null, null, null, null ]
+  turn = 1
+  winner = false
+  tie = false
+}
