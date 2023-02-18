@@ -29,3 +29,10 @@ function init() {
 }
 function render() {
 }
+function updateBoard() {
+    board.forEach((square, index) => {
+        if (square === 1) {
+            return (squareEls[index].textContent = "X");
+        }
+    });
+}

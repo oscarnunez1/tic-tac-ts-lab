@@ -46,3 +46,10 @@ function render(): void {
 
 }
 
+function updateBoard(): void {
+  board.forEach(( square: number | null, index: number ) => {
+    if ( square === 1 ) {
+      return ( squareEls[index].textContent = "X")
+    }
+  })
+}
