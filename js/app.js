@@ -34,5 +34,11 @@ function updateBoard() {
         if (square === 1) {
             return (squareEls[index].textContent = "X");
         }
+        else if (square === -1) {
+            return (squareEls[index].textContent = "O");
+        }
+        else if (square === null) {
+            return (squareEls[index].textContent = "");
+        }
     });
 }
