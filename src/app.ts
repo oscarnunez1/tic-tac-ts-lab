@@ -49,7 +49,7 @@ init()
 function init(): void {
   console.log("INITIALIZED")
   board = [ null, null, null, null, null, null, null, null, null ]
-  turn = 1
+  turn = -1
   winner = false
   tie = false
   render()
@@ -120,4 +120,14 @@ function checkForWinner(): void {
       winner = true
     }
   })
+}
+
+function switchPlayerTurn(): void {
+  console.log("SWITCHING TURNS");
+  
+  if (winner === true) {
+    return
+  } else {
+    turn = turn * -1
+  }
 }

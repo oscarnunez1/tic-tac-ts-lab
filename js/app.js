@@ -35,7 +35,7 @@ init();
 function init() {
     console.log("INITIALIZED");
     board = [null, null, null, null, null, null, null, null, null];
-    turn = 1;
+    turn = -1;
     winner = false;
     tie = false;
     render();
@@ -103,4 +103,13 @@ function checkForWinner() {
             winner = true;
         }
     });
+}
+function switchPlayerTurn() {
+    console.log("SWITCHING TURNS");
+    if (winner === true) {
+        return;
+    }
+    else {
+        turn = turn * -1;
+    }
 }
