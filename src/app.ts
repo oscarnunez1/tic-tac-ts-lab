@@ -31,6 +31,10 @@ console.log(resetBtnEl);
 
 /*----------------------------- Event Listeners -----------------------------*/
 
+squareEls.forEach((square: HTMLDivElement) => {
+  square.addEventListener("click", handleClick);
+});
+
 // resetBtnEl.addEventListener('click', handleResetClick)
 
 

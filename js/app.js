@@ -23,6 +23,9 @@ console.log(messageEl);
 const resetBtnEl = document.querySelector("#reset-button");
 console.log(resetBtnEl);
 /*----------------------------- Event Listeners -----------------------------*/
+squareEls.forEach((square) => {
+    square.addEventListener("click", handleClick);
+});
 // resetBtnEl.addEventListener('click', handleResetClick)
 /*-------------------------------- Functions --------------------------------*/
 // function handleResetClick(evt: MouseEvent): void {
