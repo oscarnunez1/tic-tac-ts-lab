@@ -47,7 +47,7 @@ squareEls.forEach((square: HTMLDivElement) => {
 init()
 
 function init(): void {
-  console.log("The game is working")
+  console.log("INITIALIZED")
   board = [ null, null, null, null, null, null, null, null, null ]
   turn = 1
   winner = false
@@ -56,6 +56,7 @@ function init(): void {
 }
 
 function render(): void {
+  console.log("RENDERING");
   updateBoard()
   updateMessage()
 }
@@ -73,6 +74,7 @@ function updateBoard(): void {
 }
 
 function updateMessage(): void {
+  console.log("UPDATING MESSAGE");
   if (!winner && !tie) {
     messageEl.innerText = `It's ${turn > 0 ? "X" : "O"}'s turn`
   } else if (!winner && tie) {
@@ -92,4 +94,8 @@ function handleClick(evt: MouseEvent): void {
   checkForWinner()
   switchPlayerTurn()
   render()
+}
+
+function placePiece(index: number): void {
+  board[index] = turn
 }

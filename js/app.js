@@ -33,7 +33,7 @@ squareEls.forEach((square) => {
 // }
 init();
 function init() {
-    console.log("The game is working");
+    console.log("INITIALIZED");
     board = [null, null, null, null, null, null, null, null, null];
     turn = 1;
     winner = false;
@@ -41,6 +41,7 @@ function init() {
     render();
 }
 function render() {
+    console.log("RENDERING");
     updateBoard();
     updateMessage();
 }
@@ -58,6 +59,7 @@ function updateBoard() {
     });
 }
 function updateMessage() {
+    console.log("UPDATING MESSAGE");
     if (!winner && !tie) {
         messageEl.innerText = `It's ${turn > 0 ? "X" : "O"}'s turn`;
     }
@@ -80,4 +82,7 @@ function handleClick(evt) {
     checkForWinner();
     switchPlayerTurn();
     render();
+}
+function placePiece(index) {
+    board[index] = turn;
 }
