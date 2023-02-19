@@ -35,14 +35,12 @@ squareEls.forEach((square: HTMLDivElement) => {
   square.addEventListener("click", handleClick);
 });
 
-// resetBtnEl.addEventListener('click', handleResetClick)
+if (resetBtnEl) {
+  resetBtnEl.addEventListener("click", init)
+}
 
 
 /*-------------------------------- Functions --------------------------------*/
-
-// function handleResetClick(evt: MouseEvent): void {
-//   console.log(evt)
-// }
 
 init()
 

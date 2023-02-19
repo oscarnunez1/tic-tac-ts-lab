@@ -26,11 +26,10 @@ console.log(resetBtnEl);
 squareEls.forEach((square) => {
     square.addEventListener("click", handleClick);
 });
-// resetBtnEl.addEventListener('click', handleResetClick)
+if (resetBtnEl) {
+    resetBtnEl.addEventListener("click", init);
+}
 /*-------------------------------- Functions --------------------------------*/
-// function handleResetClick(evt: MouseEvent): void {
-//   console.log(evt)
-// }
 init();
 function init() {
     console.log("INITIALIZED");
