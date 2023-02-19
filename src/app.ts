@@ -97,11 +97,27 @@ function handleClick(evt: MouseEvent): void {
 }
 
 function placePiece(index: number): void {
+  console.log("PIECE PLACED");
   board[index] = turn
 }
 
 function checkForTie(): void {
+  console.log("IS IT A TIE?");
+  
   if (!board.includes(null)) {
     tie = true
   }
+}
+
+function checkForWinner(): void {
+  console.log("IS THERE A WINNER?");
+  
+  winningCombos.forEach((winningArray: number[]) => {
+    let sum = winningArray.reduce((prev: number, num: number) => {
+      return prev + (board[num] ?? 0)
+    }, 0)
+    if (Math.abs(sum) === 3) {
+      winner = true
+    }
+  })
 }

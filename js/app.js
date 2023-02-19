@@ -84,10 +84,23 @@ function handleClick(evt) {
     render();
 }
 function placePiece(index) {
+    console.log("PIECE PLACED");
     board[index] = turn;
 }
 function checkForTie() {
+    console.log("IS IT A TIE?");
     if (!board.includes(null)) {
         tie = true;
     }
+}
+function checkForWinner() {
+    console.log("IS THERE A WINNER?");
+    winningCombos.forEach((winningArray) => {
+        let sum = winningArray.reduce((prev, num) => {
+            return prev + (board[num] ?? 0);
+        }, 0);
+        if (Math.abs(sum) === 3) {
+            winner = true;
+        }
+    });
 }
