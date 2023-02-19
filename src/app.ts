@@ -99,3 +99,9 @@ function handleClick(evt: MouseEvent): void {
 function placePiece(index: number): void {
   board[index] = turn
 }
+
+function checkForTie(): void {
+  if (!board.includes(null)) {
+    tie = true
+  }
+}

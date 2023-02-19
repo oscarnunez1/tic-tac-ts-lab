@@ -86,3 +86,8 @@ function handleClick(evt) {
 function placePiece(index) {
     board[index] = turn;
 }
+function checkForTie() {
+    if (!board.includes(null)) {
+        tie = true;
+    }
+}
