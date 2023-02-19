@@ -65,3 +65,16 @@ function updateMessage() {
         messageEl.innerText = `${turn > 0 ? "X" : "O"} wins`;
     }
 }
+function handleClick(evt) {
+    console.log("CLICKED");
+    const sqIdx = parseInt(evt.target.id.slice(2));
+    if (board[sqIdx] !== null)
+        return;
+    if (winner == true)
+        return;
+    placePiece(sqIdx);
+    checkForTie();
+    checkForWinner();
+    switchPlayerTurn();
+    render();
+}

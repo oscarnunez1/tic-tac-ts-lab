@@ -58,12 +58,12 @@ function render(): void {
 
 function updateBoard(): void {
   board.forEach(( square: number | null, index: number ) => {
-    if ( square === 1 ) {
-      return ( squareEls[index].textContent = "X" )
+    if (square === 1) {
+      return (squareEls[index].textContent = "X")
     } else if ( square === -1 ) {
-      return ( squareEls[index].textContent = "O" )
-    } else if ( square === null ) {
-      return ( squareEls[index].textContent = "" )
+      return (squareEls[index].textContent = "O")
+    } else if (square === null) {
+      return (squareEls[index].textContent = "")
     }
   })
 }
@@ -76,4 +76,16 @@ function updateMessage(): void {
   } else {
     messageEl.innerText = `${turn > 0 ? "X" : "O"} wins`;
   }
+}
+
+function handleClick(evt: MouseEvent): void {
+  console.log("CLICKED");
+  const sqIdx = parseInt((evt.target as HTMLElement).id.slice(2))
+  if (board[sqIdx] !== null) return
+  if (winner == true) return
+  placePiece(sqIdx)
+  checkForTie()
+  checkForWinner()
+  switchPlayerTurn()
+  render()
 }
