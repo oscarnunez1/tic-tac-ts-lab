@@ -70,9 +70,26 @@ h2 {
 }
 
 .sqr:hover {
-  background-color: #F4AC45;
+  background-color: #F7C278;
   transform: translateY(-10px);
   
+}
+
+.sqr:not(:empty) {
+  width: 150px;
+  height: 150px;
+  background-color: #A9C6C3;
+  border: 2px solid #333;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-size: 100px;
+  background-color: #F4AC45;
+  pointer-events: none;
 }
 
 
