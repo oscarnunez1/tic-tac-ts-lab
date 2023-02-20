@@ -60,13 +60,13 @@ function updateBoard() {
 function updateMessage() {
     console.log("UPDATING MESSAGE");
     if (!winner && !tie) {
-        messageEl.innerText = `It's ${turn > 0 ? "X" : "O"}'s turn`;
+        messageEl.innerText = `It's ${turn > 0 ? "X" : "O"}'s turn!`;
     }
     else if (!winner && tie) {
-        messageEl.innerText = `Tie game`;
+        messageEl.innerText = `Tie game!`;
     }
     else {
-        messageEl.innerText = `${turn > 0 ? "X" : "O"} wins`;
+        messageEl.innerText = `${turn > 0 ? "X" : "O"} wins!`;
     }
 }
 function handleClick(evt) {
