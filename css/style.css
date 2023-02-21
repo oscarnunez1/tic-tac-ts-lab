@@ -100,11 +100,6 @@ h2 {
   pointer-events: none;
 }
 
-.btn-container {
-  display: flex;
-  flex-direction: column;
-}
-
 .btn {
   background-color: #007bff;
   color: #fff;
