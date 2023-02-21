@@ -17,12 +17,6 @@ html {
   background-color: #0E1C36;
 }
 
-.game-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
 
 h1, h2 {
   text-align: center;
@@ -40,6 +34,13 @@ h2 {
   font-size: 50px;
   font-weight: 500;
   color: white;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .board {
@@ -100,6 +101,10 @@ h2 {
   pointer-events: none;
 }
 
+.btn-container {
+  margin-top: 60%;
+}
+
 .btn {
   background-color: #007bff;
   color: #fff;
@@ -107,9 +112,6 @@ h2 {
   padding: 1px;
   width: 80px;
   height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
   transition: transform 0.2s ease-in-out;
 }

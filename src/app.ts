@@ -21,13 +21,10 @@ let tie: boolean
 /*------------------------ Cached Element References ------------------------*/
 
 const squareEls = document.querySelectorAll(".sqr") as NodeListOf<HTMLDivElement>;
-console.log(squareEls)
 
 const messageEl = document.querySelector("#message") as HTMLDivElement;
-console.log(messageEl) 
 
 const resetBtnEl = document.querySelector("#reset-button") as HTMLButtonElement;
-console.log(resetBtnEl);
 
 /*----------------------------- Event Listeners -----------------------------*/
 
@@ -38,7 +35,6 @@ squareEls.forEach((square: HTMLDivElement) => {
 if (resetBtnEl) {
   resetBtnEl.addEventListener("click", init)
 }
-
 
 /*-------------------------------- Functions --------------------------------*/
 
