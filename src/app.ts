@@ -45,7 +45,6 @@ if (resetBtnEl) {
 init()
 
 function init(): void {
-  console.log("INITIALIZED")
   board = [ null, null, null, null, null, null, null, null, null ]
   turn = -1
   winner = false
@@ -54,7 +53,6 @@ function init(): void {
 }
 
 function render(): void {
-  console.log("RENDERING");
   updateBoard()
   updateMessage()
 }
@@ -72,7 +70,6 @@ function updateBoard(): void {
 }
 
 function updateMessage(): void {
-  console.log("UPDATING MESSAGE");
   if (!winner && !tie) {
     messageEl.innerText = `It's ${turn > 0 ? "X" : "O"}'s turn`
   } else if (!winner && tie) {
@@ -83,7 +80,6 @@ function updateMessage(): void {
 }
 
 function handleClick(evt: MouseEvent): void {
-  console.log("CLICKED");
   const sqIdx = parseInt((evt.target as HTMLElement).id.slice(2))
   if (board[sqIdx] !== null) return
   if (winner == true) return
@@ -95,21 +91,16 @@ function handleClick(evt: MouseEvent): void {
 }
 
 function placePiece(index: number): void {
-  console.log("PIECE PLACED");
   board[index] = turn
 }
 
 function checkForTie(): void {
-  console.log("IS IT A TIE?");
-  
   if (!board.includes(null)) {
     tie = true
   }
 }
 
 function checkForWinner(): void {
-  console.log("IS THERE A WINNER?");
-  
   winningCombos.forEach((winningArray: number[]) => {
     let sum = winningArray.reduce((prev: number, num: number) => {
       return prev + (board[num] ?? 0)
@@ -121,8 +112,6 @@ function checkForWinner(): void {
 }
 
 function switchPlayerTurn(): void {
-  console.log("SWITCHING TURNS");
-  
   if (winner === true) {
     return
   } else {

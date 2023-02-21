@@ -66,11 +66,11 @@ h2 {
   box-sizing: border-box;
   border-radius: 8px;
   font-size: 100px;
-  transition: transform 0.2s ease-in-out
+  transition: transform 0.2s ease-in-out;
 }
 
 .sqr:hover {
-  background-color: #F7C278;
+  background-color: #F4AC45;
   transform: translateY(-10px);
   
 }
